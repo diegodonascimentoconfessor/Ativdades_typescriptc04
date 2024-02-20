@@ -12,6 +12,14 @@ class Livro {
         this.categoria = categoria;
         this.quantidadeDisponivel = quantidadeDisponivel;
     }
+    mostrarDados(){
+   console.log('Dados Livros')
+   console.log(`titulo:${this.titulo}`)
+   console.log(`autor:${this.autor}`)
+   console.log(`editora:${this.editora}`)
+   console.log(`categoria:${this.categoria}`)
+   console.log(`quantidade:${this.quantidadeDisponivel}`)
+    }
 }
 
 class Usuario {
@@ -28,6 +36,14 @@ class Usuario {
         this.relatorioEmprestimo = relatorioEmprestimo;
         this.cpf=cpf
     }
+    mostrarDados(){
+        console.log('Dados Usuarios')
+        console.log(`nome:${this.nome}`)
+        console.log(`endereço:${this.endereco}`)
+        console.log(`telefone:${this.telefone}`)
+        console.log(`relatorio emprestimo:${this.relatorioEmprestimo}`)
+        console.log(`cpf:${this.cpf}`)
+    }
 }
 
 class Emprestimo {
@@ -42,6 +58,13 @@ class Emprestimo {
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
+    mostrarDados(){
+        console.log('Dados Emprestimo')
+        console.log(`livro:${this.livro}`)
+        console.log(`usuario:${this.usuario}`)
+        console.log(`data emprestimo${this.dataEmprestimo}`)
+        console.log(`data Devolução:${this.dataDevolucao}`)
+    }
 }
 
 const livro1 = new Livro('A Moreninha', 'Joaquim Manuel de Macedo', 'Editora B', 'Romance', 0 );
@@ -50,6 +73,6 @@ const usuario1 = new Usuario('João', 'Rua b, 191', '099900000', "emprestimo ati
 
 const emprestimo1 = new Emprestimo(livro1, usuario1, new Date(2024- 2-19), new Date(2024- 4-5));
 
-console.log(usuario1.relatorioEmprestimo);
-console.log(livro1)
-console.log(emprestimo1)
+console.log(livro1.mostrarDados())
+console.log(emprestimo1.mostrarDados())
+console.log(usuario1.mostrarDados())

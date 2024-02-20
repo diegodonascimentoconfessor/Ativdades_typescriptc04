@@ -1,20 +1,38 @@
 class Funcionario {
+    endereco: string[]
     nome: string;
     email: string;
     telefone: string;
     cargo: string;
-    constructor(nome: string, email: string, telefone: string, cargo: string,) {
+    data_nascimento:Date
+    // Metodo construtor da classe 
+    constructor( endereco:string[], nome: string, email: string, telefone: string, cargo: string,data_nascimento:Date) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
         this.cargo = cargo;
+        this.data_nascimento = data_nascimento
+        this.endereco=endereco
 
     }
+ mostrarDados(){
+    console.log('Dados do funcionario')
+    console.log(`nome: ${this.nome}`)
+    console.log(`email: ${this.email}`)
+    console.log(`telefone:${this.telefone}`)
+    console.log(`cargo:${this.cargo}`)
+    console.log(`endereco:${this.endereco}`)
+    console.log(`data_nascimento:${this.data_nascimento.toLocaleString('pt-Br')}`)
+    
+
+}
 }
 
 
-const Funcionario1 = new Funcionario('joao', 'joao@gmail', '05255444', ' porteiro ')
 
+const Funcionario1 = new Funcionario(['rua senac,'], 'joão', 'joao@gmail', '05255444', ' porteiro ', new Date('2024-2-19'))
+
+console.log(Funcionario1.mostrarDados())
 
 
 
@@ -33,10 +51,18 @@ class Consulta {
         this.convenio=convenio,
         this.medico=medico
     }
-}
-const Consulta1 = new Consulta('pajuçara', new Date('2024-2-19'), true, Funcionario1)
+    mostraDados(){
+ console.log('Dadosconsulta')
+ console.log(`local: ${this.local}`)
+ console.log(`data: ${this.data}`)
+ console.log(`convenio: ${this.convenio}`)
+ console.log(`medico: ${this.medico}`)
 
-console.log(Consulta1)
+    }
+}
+const consulta1 =  new Consulta ('pajuçara', new Date('2024-2-19'), true, Funcionario1)
+
+console.log(consulta1.mostraDados())
 
 
 
@@ -51,15 +77,22 @@ class Paciente {
     constructor (nome:string, idade:number, contato: string, sintomas:string){
 
     
-        this.nome=nome,
-        this.idade=idade,
-        this.contato = contato,
-        this.sintomas= sintomas
+        this.nome=nome;
+        this.idade=idade;
+        this.contato = contato;
+        this.sintomas= sintomas;
 
     }
+ 
+    mostraDados(){
+    console.log('Dados Paciente')
+    console.log(`nome: ${this.nome}`)
+    console.log(`idade:${this.idade}`)
+    console.log(`contato: ${this.contato}`)
+    console.log(`sintomas:${this.sintomas}`)
+ }
 }
 
 
 const paciente1 = new Paciente('joao', 33, '89878778',"febre alta")
-
-console.log (paciente1)
+console.log(paciente1.mostraDados())
