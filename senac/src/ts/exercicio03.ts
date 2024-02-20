@@ -42,3 +42,11 @@ class Planejamento {
 const CadastroConta1 = new CadastroConta( 34343, "Paulo", 45, "paulo@gmail.com")
 
 console.log(CadastroConta1)
+
+const controledeDespesas1= new controledeDespesas(75,"concluida", "comprovante de transferencia",new Date (2024-2-20))
+
+console.log(controledeDespesas1)
+
+const Planejamento1= new Planejamento("concluida", "atiginda","atingindo")
+
+console.log (Planejamento1)
