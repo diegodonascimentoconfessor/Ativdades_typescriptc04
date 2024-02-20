@@ -7,10 +7,16 @@ class CadastroConta {
         this.id = id;
         this.cliente = cliente;
         this.idade = idade;
-        this.email = email
+        this.email = email;
     }
+    mostraDados(){
+        console.log('Dados Contas')
+        console.log(`id: ${this.id}`)
+        console.log(`cliente:${this.cliente}`)
+        console.log(`idade: ${this.idade}`)
+        console.log(`email:${this.email}`)
 }
-
+}
 class controledeDespesas {
     saldo: number
     transferencia: string
@@ -21,32 +27,41 @@ class controledeDespesas {
         this.saldo = saldo;
         this.transferencia = transferencia;
         this.extrato = extrato;
-        this.data = data
+        this.data = data;
 
 
     }
+    mostraDados(){
+        console.log('Dados controle de Despesas')
+        console.log(`saldo: ${this.saldo}`)
+        console.log(`transferencia:${this.transferencia}`)
+        console.log(`extrato: ${this.extrato}`)
+        console.log(`data:${this.data}`)
+}
 }
 class Planejamento {
     meta: string
     controledegastos: string
-    progesso: string
+    progresso: string
 
     constructor(meta: string, controledeGastos: string, progresso: string) {
         this.meta = meta;
         this.controledegastos = controledeGastos;
-        this.progesso = progresso
+        this.progresso = progresso
+    }
+    mostraDados(){
+        console.log('Planejamento')
+        console.log(`meta: ${this.meta}`)
+        console.log(`controle de gastos ${this.controledegastos}`)
+        console.log(`progresso: ${this.progresso}`)
     }
 }
 
 
-const CadastroConta1 = new CadastroConta( 34343, "Paulo", 45, "paulo@gmail.com")
+const CadastroConta1 = new CadastroConta( 34343, "Paulo", 45 , "paulo@gmail.com")
 
-console.log(CadastroConta1)
-
-const controledeDespesas1= new controledeDespesas(75,"concluida", "comprovante de transferencia",new Date (2024-2-20))
-
-console.log(controledeDespesas1)
-
-const Planejamento1= new Planejamento("concluida", "atiginda","atingindo")
-
-console.log (Planejamento1)
+ const  controledeDespesas1 = new controledeDespesas(100,"Realizada", "comprovante", new Date("2024-02-20"))
+ const planejamento1 = new  Planejamento("alcançada", "alcançado com sucesso", "elevado")
+ console.log(CadastroConta1.mostraDados())
+ console.log(controledeDespesas1.mostraDados())
+ console.log(planejamento1.mostraDados())

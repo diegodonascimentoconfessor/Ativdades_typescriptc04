@@ -30,7 +30,7 @@ class Funcionario {
 
 
 
-const Funcionario1 = new Funcionario(['rua senac,'], 'joão', 'joao@gmail', '05255444', ' porteiro ', new Date('2024-2-19'))
+const Funcionario1 = new Funcionario(['rua senac,'], 'joão', 'joao@gmail', '05255444', ' medico ', new Date('2024-2-19'))
 
 console.log(Funcionario1.mostrarDados())
 
