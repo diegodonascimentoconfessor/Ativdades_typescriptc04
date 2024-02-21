@@ -9,7 +9,7 @@ class CadastrodeProjetos {
         this.faseprojeto = faseprojeto;
 
     }
-    mostraDados() {
+    mostrarDados() {
         console.log('cadastro de Projetos')
         console.log(`projeto: ${this.projeto}`)
         console.log(`tipo de projeto: ${this.tipodeprojeto}`)
@@ -20,7 +20,7 @@ class CadastrodeProjetos {
 
 const CadastrodeProjetos1 = new CadastrodeProjetos("sistema eficiente", "Tecnologico", "Inicial")
 
-console.log(CadastrodeProjetos1.mostraDados())
+console.log(CadastrodeProjetos1.mostrarDados())
 
 class ControledeTarefas {
     programador: string
@@ -37,7 +37,7 @@ class ControledeTarefas {
         this.prazofinal = prazofinal;
 
     }
-    mostraDados() {
+    mostrarDados() {
         console.log('controle de Tarefas')
         console.log(`desenvolvedor: ${this.desenvolvedor}`)
         console.log(`po: ${this.po}`)
@@ -50,7 +50,7 @@ class ControledeTarefas {
 
 const ControledeTarefas1 = new ControledeTarefas("Pedro", "João", "William", new Date("2024-2-20"), new Date("2024-5-20"))
 
-console.log(ControledeTarefas1.mostraDados())
+console.log(ControledeTarefas1.mostrarDados())
 
 
 class Comunicação {
@@ -66,7 +66,7 @@ class Comunicação {
 
 
     }
-    mostraDados() {
+    mostrarDados() {
         console.log('Portal para comunicaçãao')
         console.log(`canal para atualização: ${this.canalatualização}`)
         console.log(` canal para sugestão: ${this.canalsugestão}`)
@@ -77,5 +77,5 @@ class Comunicação {
 
 const Comunicação1 = new Comunicação("Atualização Projeto", "faça a  sua  sugestão", "Reunião")
 
-console.log(Comunicação1.mostraDados())
+console.log(Comunicação1.mostrarDados())
 

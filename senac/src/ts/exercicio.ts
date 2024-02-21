@@ -84,7 +84,7 @@ class Paciente {
 
     }
  
-    mostraDados(){
+    mostrarDados(){
     console.log('Dados Paciente')
     console.log(`nome: ${this.nome}`)
     console.log(`idade:${this.idade}`)
@@ -95,4 +95,4 @@ class Paciente {
 
 
 const paciente1 = new Paciente('joao', 33, '89878778',"febre alta")
-console.log(paciente1.mostraDados())
+console.log(paciente1.mostrarDados())

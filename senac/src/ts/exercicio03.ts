@@ -9,7 +9,7 @@ class CadastroConta {
         this.idade = idade;
         this.email = email;
     }
-    mostraDados(){
+    mostrarDados(){
         console.log('Dados Contas')
         console.log(`id: ${this.id}`)
         console.log(`cliente:${this.cliente}`)
@@ -31,7 +31,7 @@ class controledeDespesas {
 
 
     }
-    mostraDados(){
+    mostrarDados(){
         console.log('Dados controle de Despesas')
         console.log(`saldo: ${this.saldo}`)
         console.log(`transferencia:${this.transferencia}`)
@@ -49,7 +49,7 @@ class Planejamento {
         this.controledegastos = controledeGastos;
         this.progresso = progresso
     }
-    mostraDados(){
+    mostrarDados(){
         console.log('Planejamento')
         console.log(`meta: ${this.meta}`)
         console.log(`controle de gastos ${this.controledegastos}`)
@@ -62,6 +62,6 @@ const CadastroConta1 = new CadastroConta( 34343, "Paulo", 45 , "paulo@gmail.com"
 
  const  controledeDespesas1 = new controledeDespesas(100,"Realizada", "comprovante", new Date("2024-02-20"))
  const planejamento1 = new  Planejamento("alcançada", "alcançado com sucesso", "elevado")
- console.log(CadastroConta1.mostraDados())
- console.log(controledeDespesas1.mostraDados())
- console.log(planejamento1.mostraDados())
+ console.log(CadastroConta1.mostrarDados())
+ console.log(controledeDespesas1.mostrarDados())
+ console.log(planejamento1.mostrarDados())
