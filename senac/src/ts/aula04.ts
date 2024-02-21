@@ -1,4 +1,4 @@
-class Pessoa{
+class Pessoar{
     nome: string;
     cpf: string;
     telefone: string;
@@ -11,6 +11,6 @@ class Pessoa{
     }
 }
 
-const pessoa1  = new Pessoa('Diego', '123456789','12345678', new Date('2023-2-21'))
+const pessoa1  = new Pessoar('Diego', '123456789','12345678', new Date('2023-2-21'))
 
 console.log(pessoa1.cpf)
