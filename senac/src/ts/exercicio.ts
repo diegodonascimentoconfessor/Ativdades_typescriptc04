@@ -93,7 +93,7 @@ class Paciente extends Pessoa{
     mostrarDados(){
         super.mostrarDados();
         console.log(`idade ${this.idade}`);
-        console.log(`sitomas: ${this.sintomas}`);
+        console.log(`sintomas: ${this.sintomas}`);
         console.log(`cpf:${this.cpf}`);
         
      }
