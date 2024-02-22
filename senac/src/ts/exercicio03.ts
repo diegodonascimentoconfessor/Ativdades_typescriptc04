@@ -1,14 +1,10 @@
 class CadastroConta {
-    id: number
-    cliente: string
-    idade: number
-    email: string
-    constructor(id: number, cliente: string, idade: number, email: string) {
-        this.id = id;
-        this.cliente = cliente;
-        this.idade = idade;
-        this.email = email;
-    }
+    constructor(
+        public id: number,
+        public cliente: string,
+        public idade: number,
+        public email: string
+    ) { }
     mostrarDados() {
         console.log('Dados Contas')
         console.log(`id: ${this.id}`)
@@ -18,19 +14,12 @@ class CadastroConta {
     }
 }
 class controledeDespesas {
-    saldo: number
-    transferencia: string
-    extrato: string
-    data: Date
-
-    constructor(saldo: number, transferencia: string, extrato: string, data: Date) {
-        this.saldo = saldo;
-        this.transferencia = transferencia;
-        this.extrato = extrato;
-        this.data = data;
-
-
-    }
+    constructor(
+        public saldo: number,
+        public transferencia: string,
+        public extrato: string,
+        public data: Date
+    ) { }
     mostrarDados() {
         console.log('Dados controle de Despesas')
         console.log(`saldo: ${this.saldo}`)
@@ -40,19 +29,15 @@ class controledeDespesas {
     }
 }
 class Planejamento {
-    meta: string
-    controledegastos: string
-    progresso: string
-
-    constructor(meta: string, controledeGastos: string, progresso: string) {
-        this.meta = meta;
-        this.controledegastos = controledeGastos;
-        this.progresso = progresso
-    }
+    constructor(
+        public meta: string,
+        public controledeGastos: string,
+        public progresso: string
+    ) { }
     mostrarDados() {
         console.log('Planejamento')
         console.log(`meta: ${this.meta}`)
-        console.log(`controle de gastos ${this.controledegastos}`)
+        console.log(`controle de gastos ${this.controledeGastos}`)
         console.log(`progresso: ${this.progresso}`)
     }
 }
@@ -65,3 +50,4 @@ const planejamento1 = new Planejamento("alcançada", "alcançado com sucesso", "
 console.log(CadastroConta1.mostrarDados())
 console.log(controledeDespesas1.mostrarDados())
 console.log(planejamento1.mostrarDados())
+

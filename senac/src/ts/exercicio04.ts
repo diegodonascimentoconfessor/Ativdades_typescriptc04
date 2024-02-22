@@ -1,18 +1,13 @@
 class CadastrodeProjetos {
-    projeto: string
-    tipodeprojeto: string
-    faseprojeto: string
-
-    constructor(projeto: string, tipodeProjeto: string, faseprojeto: string) {
-        this.projeto = projeto;
-        this.tipodeprojeto = tipodeProjeto;
-        this.faseprojeto = faseprojeto;
-
-    }
+    constructor(
+        public projeto: string,
+        public tipodeProjeto: string,
+        public faseprojeto: string
+    ) { }
     mostrarDados() {
         console.log('cadastro de Projetos')
         console.log(`projeto: ${this.projeto}`)
-        console.log(`tipo de projeto: ${this.tipodeprojeto}`)
+        console.log(`tipo de projeto: ${this.tipodeProjeto}`)
         console.log(`fase do projeto: ${this.faseprojeto}`)
     }
 
@@ -23,20 +18,14 @@ const CadastrodeProjetos1 = new CadastrodeProjetos("sistema eficiente", "Tecnolo
 console.log(CadastrodeProjetos1.mostrarDados())
 
 class ControledeTarefas {
-    programador: string
-    desenvolvedor: string
-    po: string
-    prazoinicial: Date
-    prazofinal: Date
-    constructor(programador: string, desenvolvedor: string, po: string, prazoinicial: Date, prazofinal: Date) {
 
-        this.programador = programador;
-        this.desenvolvedor = desenvolvedor;
-        this.po = po;
-        this.prazoinicial = prazoinicial;
-        this.prazofinal = prazofinal;
-
-    }
+    constructor(
+        public programador: string,
+        public desenvolvedor: string,
+        public po: string,
+        public prazoinicial: Date,
+        public prazofinal: Date
+    ) { }
     mostrarDados() {
         console.log('controle de Tarefas')
         console.log(`desenvolvedor: ${this.desenvolvedor}`)
@@ -54,18 +43,11 @@ console.log(ControledeTarefas1.mostrarDados())
 
 
 class Comunicação {
-    canalatualização: string
-    canalsugestão: string
-    canalreunião: string
-
-    constructor(canalatualização: string, canalsugestão: string, canalreunião: string) {
-
-        this.canalatualização = canalatualização;
-        this.canalsugestão = canalsugestão;
-        this.canalreunião = canalreunião;
-
-
-    }
+    constructor(
+        public canalatualização: string,
+        public canalsugestão: string,
+        public canalreunião: string
+    ) { }
     mostrarDados() {
         console.log('Portal para comunicaçãao')
         console.log(`canal para atualização: ${this.canalatualização}`)
