@@ -9,13 +9,13 @@ class CadastroConta {
         this.idade = idade;
         this.email = email;
     }
-    mostrarDados(){
+    mostrarDados() {
         console.log('Dados Contas')
         console.log(`id: ${this.id}`)
         console.log(`cliente:${this.cliente}`)
         console.log(`idade: ${this.idade}`)
         console.log(`email:${this.email}`)
-}
+    }
 }
 class controledeDespesas {
     saldo: number
@@ -31,13 +31,13 @@ class controledeDespesas {
 
 
     }
-    mostrarDados(){
+    mostrarDados() {
         console.log('Dados controle de Despesas')
         console.log(`saldo: ${this.saldo}`)
         console.log(`transferencia:${this.transferencia}`)
         console.log(`extrato: ${this.extrato}`)
         console.log(`data:${this.data}`)
-}
+    }
 }
 class Planejamento {
     meta: string
@@ -49,7 +49,7 @@ class Planejamento {
         this.controledegastos = controledeGastos;
         this.progresso = progresso
     }
-    mostrarDados(){
+    mostrarDados() {
         console.log('Planejamento')
         console.log(`meta: ${this.meta}`)
         console.log(`controle de gastos ${this.controledegastos}`)
@@ -58,10 +58,10 @@ class Planejamento {
 }
 
 
-const CadastroConta1 = new CadastroConta( 34343, "Paulo", 45 , "paulo@gmail.com")
+const CadastroConta1 = new CadastroConta(34343, "Paulo", 45, "paulo@gmail.com")
 
- const  controledeDespesas1 = new controledeDespesas(100,"Realizada", "comprovante", new Date("2024-02-20"))
- const planejamento1 = new  Planejamento("alcançada", "alcançado com sucesso", "elevado")
- console.log(CadastroConta1.mostrarDados())
- console.log(controledeDespesas1.mostrarDados())
- console.log(planejamento1.mostrarDados())
+const controledeDespesas1 = new controledeDespesas(100, "Realizada", "comprovante", new Date("2024-02-20"))
+const planejamento1 = new Planejamento("alcançada", "alcançado com sucesso", "elevado")
+console.log(CadastroConta1.mostrarDados())
+console.log(controledeDespesas1.mostrarDados())
+console.log(planejamento1.mostrarDados())
