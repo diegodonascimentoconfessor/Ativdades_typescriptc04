@@ -4,6 +4,7 @@ class CadastroConta {
         public cliente: string,
         public idade: number,
         public email: string
+        
     ) { }
     mostrarDados() {
         console.log('Dados Contas')
@@ -13,6 +14,67 @@ class CadastroConta {
         console.log(`email:${this.email}`)
     }
 }
+
+class Pessoafisica{
+nome: string ;
+idade: number;
+endereco: string ;
+telefone:string;
+conta:string ;
+cpf: string ;
+agencia:string
+
+constructor(nome:string,idade:number,endereco:string,telefone:string, conta:string,cpf:string, agencia:string){
+this.nome= nome;
+this.idade = idade ;
+this.endereco = endereco
+this.telefone =telefone
+this.conta = conta 
+this.cpf = cpf
+this.agencia= agencia
+   
+
+}
+
+mostrarDados(){
+console.log ('Dados pessoa Fisica')
+console.log (`nome: ${this.nome}`)
+console. log(`idade:${this.idade}`)
+console.log(`endereco:${this.endereco}`)
+console.log(`telefone: ${this.telefone}`)
+console.log(`conta:${this.conta}`)
+console.log(`cpf:${this.cpf}`)
+console.log(`agencia:${this.agencia}`)
+}
+}
+
+
+ const Pessoafisica1 = new Pessoafisica ("joaquim", 35, " rua Pajuçara", "8767668766","abcd9878877", "09088908", "a55655544")
+
+class pessoajuridica {
+    nome: string ;
+    idade: number;
+    endereco: string ;
+    telefone:string;
+    conta:string ;
+    cnpj: string ;
+    agencia:string;
+
+    constructor(nome:string,idade:number,endereco:string, telefone:string,conta:string,cnpj:string, agencia:string){
+
+        this.nome = nome
+        this.idade =idade
+        this.endereco = endereco
+        this.telefone = telefone
+        this.conta =conta
+        this.cnpj = cnpj
+        this.agencia= agencia
+
+
+    }
+    
+}
+
 class controledeDespesas {
     constructor(
         public saldo: number,
@@ -50,4 +112,4 @@ const planejamento1 = new Planejamento("alcançada", "alcançado com sucesso", "
 console.log(CadastroConta1.mostrarDados())
 console.log(controledeDespesas1.mostrarDados())
 console.log(planejamento1.mostrarDados())
-
+console.log(Pessoafisica1.mostrarDados())

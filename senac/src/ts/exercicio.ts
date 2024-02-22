@@ -79,7 +79,7 @@ class Paciente extends Pessoa {
         ) {
         super(endereco, nome, email, telefone, data_nascimento, rg)
 
-        }  
+        }               
 
     
     mostrarDados() {

@@ -33,7 +33,7 @@ class Usuario {
     }
 }
 
-class Emprestimo {
+class Emprestimo  {
 
     constructor(
         public livro: Livro,
