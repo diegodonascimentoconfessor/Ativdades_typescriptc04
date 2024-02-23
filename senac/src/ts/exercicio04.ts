@@ -15,7 +15,7 @@ class CadastrodeProjetos {
 
 const CadastrodeProjetos1 = new CadastrodeProjetos("sistema eficiente", "Tecnologico", "Inicial")
 
-console.log(CadastrodeProjetos1.mostrarDados())
+//console.log(CadastrodeProjetos1.mostrarDados())
 
 class ControledeTarefas {
 
@@ -59,5 +59,5 @@ class Comunicação {
 
 const Comunicação1 = new Comunicação("Atualização Projeto", "faça a  sua  sugestão", "Reunião")
 
-console.log(Comunicação1.mostrarDados())
+//console.log(Comunicação1.mostrarDados())
 

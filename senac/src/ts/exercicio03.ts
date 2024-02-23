@@ -57,7 +57,7 @@ class CadastroConta extends Pessoafisica {
         console.log(`agencia:${this.agencia}`)
     }
 }
-const CadastroConta1 = new CadastroConta("565433ff", "vip", 45, "joaquim", "joaquim", " Rua Pajuçaar", "849887865", "a54544", "98779977", "tr544433");
+const CadastroConta1 = new CadastroConta("565433ff", "vip", 45, "joaquim", "joaquim", " Rua Pajuçaa", "849887865", "a54544", "98779977", "tr544433");
 class Pessoajuridica extends Pessoafisica {
     constructor(
         public nome: string,
@@ -124,6 +124,6 @@ class Planejamento {
 
 const controledeDespesas1 = new controledeDespesas(100, "Realizada", "comprovante", new Date("2024-02-20"))
 const planejamento1 = new Planejamento("alcançada", "alcançado com sucesso", "elevado")
-console.log(CadastroConta1.mostrarDados())
-console.log("=========")
-console.log(pessoajuridica1.mostrarDados())
+//console.log(CadastroConta1.mostrarDados())
+//console.log("=========")
+//console.log(pessoajuridica1.mostrarDados())

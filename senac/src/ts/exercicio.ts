@@ -23,7 +23,7 @@ class Pessoa {
 }
 
 // atributos Proprios da Classe Funcionario 
-class Funcionario extends Pessoa {
+ export class Funcionario extends Pessoa {
     // Metodo construtor da classe 
     constructor(
         public cargo: string,
@@ -96,7 +96,7 @@ class Paciente extends Pessoa {
 
 const paciente1 = new Paciente(34, "febre alta", '89878778', "06547877", ["rua sem nome "], "pedro", "pedro@gmail.com", "84988885544", new Date("2024-2-21"))
 
-paciente1.mostrarDados()
-console.log('================================================')
-Funcionario1.mostrarDados()
+//paciente1.mostrarDados()
+//console.log('================================================')
+//Funcionario1.mostrarDados()
 

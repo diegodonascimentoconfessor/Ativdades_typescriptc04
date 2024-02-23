@@ -48,7 +48,7 @@ class Usuario extends CadastroBiblioteca {
         public relatorioEmprestimo: string,
         public codigodeacesso: string,
         email: string,
-        cpf: string
+        cpf: string,
     ) {
         super(nome, codigodeacesso, email, endereco, cpf, telefone)
     }
@@ -97,5 +97,5 @@ class Emprestimo extends CadastroBiblioteca {
 
 const emprestimo1 = new Emprestimo("A moreninha", "Diego", new Date("2024-02-23"), new Date("2024-04-23"), "Diego Confessor", "AB654455", "diego@hotmail.com", "rua pajuçara", "0876654", "878655443")
 
-console.log(emprestimo1.mostrarDados());
-console.log("=======================");
+//console.log(emprestimo1.mostrarDados());
+//console.log("=======================");

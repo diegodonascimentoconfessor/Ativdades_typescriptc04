@@ -16,4 +16,4 @@ class Pessoal {
 
 const pessoa1 = new Pessoal('Diego', '123456789', '12345678', new Date('2023-2-21'))
 
-pessoa1.mostrardados()
+//pessoa1.mostrardados()
