@@ -1,3 +1,26 @@
+class CadastroBiblioteca {
+    constructor(
+        public nome: string,
+        public codigodeacesso: string,
+        public email: string,
+        public endereco: string,
+        public cpf: string,
+        public telefone: string
+    ) { }
+
+    MostrarDados() {
+        console.log('Dados Cadastro Biblioteca')
+        console.log(`nome:${this.nome}`)
+        console.log(`codigodeacesso:${this.codigodeacesso}`)
+        console.log(`email:${this.email}`)
+        console.log(`endereco:${this.endereco}`)
+        console.log(`cpf:${this.cpf}`)
+        console.log(`telefone:${this.telefone}`)
+    }
+}
+
+const CadastroBiblioteca1 = new CadastroBiblioteca("Diego", "AB654455", "diego@hotmail.com", "Rua pajuçara", "09877777", "498766555")
+
 class Livro {
     constructor(
         public titulo: string,
@@ -6,6 +29,7 @@ class Livro {
         public categoria: string,
         public quantidadeDisponivel: number
     ) { }
+
     mostrarDados() {
         console.log('Dados Livros')
         console.log(`titulo:${this.titulo}`)
@@ -16,13 +40,19 @@ class Livro {
     }
 }
 
-class Usuario {
+class Usuario extends CadastroBiblioteca {
     constructor(
-        public nome: string,
-        public endereco: string,
-        public telefone: string,
+        nome: string,
+        endereco: string,
+        telefone: string,
         public relatorioEmprestimo: string,
-        public cpf: string) { }
+        public codigodeacesso: string,
+        email: string,
+        cpf: string
+    ) {
+        super(nome, codigodeacesso, email, endereco, cpf, telefone)
+    }
+
     mostrarDados() {
         console.log('Dados Usuarios')
         console.log(`nome:${this.nome}`)
@@ -33,28 +63,33 @@ class Usuario {
     }
 }
 
-class Emprestimo  {
-
+class Emprestimo extends CadastroBiblioteca {
     constructor(
-        public livro: Livro,
-        public usuario: Usuario,
+    public livro: string,
+     public usuario: string,
         public dataEmprestimo: Date,
-        public dataDevolucao: Date) { }
+        public dataDevolucao: Date,
+        nome: string,
+        codigodeacesso: string,
+        email: string,
+        endereco: string,
+        cpf: string,
+        telefone: string
+    ) {
+        super(nome, codigodeacesso, email, endereco, cpf, telefone)
+    }
+
     mostrarDados() {
-        console.log('Dados Emprestimo')
+    super.MostrarDados()
+      console.log('Dados Emprestimo')
         console.log(`livro:${this.livro}`)
         console.log(`usuario:${this.usuario}`)
-        console.log(`data emprestimo${this.dataEmprestimo}`)
-        console.log(`data Devolução:${this.dataDevolucao}`)
+      console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
+     console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
     }
 }
 
-const livro1 = new Livro('A Moreninha', 'Joaquim Manuel de Macedo', 'Editora B', 'Romance', 0);
+const emprestimo1 = new Emprestimo("A moreninha", "Diego", new Date("2024-02-23"), new Date("2024-04-23"), "Diego Confessor", "AB654455", "diego@hotmail.com", "rua pajuçara", "0876654", "878655443")
 
-const usuario1 = new Usuario('João', 'Rua b, 191', '099900000', "emprestimo ativo", "0987766554");
-
-const emprestimo1 = new Emprestimo(livro1, usuario1, new Date(2024 - 2 - 19), new Date(2024 - 4 - 5));
-
-console.log(livro1.mostrarDados())
-console.log(emprestimo1.mostrarDados())
-console.log(usuario1.mostrarDados())
+console.log(emprestimo1.mostrarDados());
+console.log("=======================");
