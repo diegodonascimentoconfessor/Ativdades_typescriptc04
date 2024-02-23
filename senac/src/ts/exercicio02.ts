@@ -84,6 +84,12 @@ class Emprestimo extends CadastroBiblioteca {
       console.log('Dados Emprestimo')
         console.log(`livro:${this.livro}`)
         console.log(`usuario:${this.usuario}`)
+        console.log(`nome:${this.nome}`)
+        console.log(`Codigo de Acesso:${this.codigodeacesso}`)
+        console.log(`email${this.email}`)
+        console.log(`Endereço:${this.endereco}`)
+        console.log(`Cpf:${this.cpf}`)
+        console.log(`Telenone:${this.telefone}`)
       console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
      console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
     }
