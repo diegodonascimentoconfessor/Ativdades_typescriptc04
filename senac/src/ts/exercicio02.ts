@@ -31,15 +31,10 @@ class Livro {
     ) { }
 
     mostrarDados() {
-        console.log('Dados Livros')
-        console.log(`titulo:${this.titulo}`)
-        console.log(`autor:${this.autor}`)
-        console.log(`editora:${this.editora}`)
-        console.log(`categoria:${this.categoria}`)
-        console.log(`quantidade:${this.quantidadeDisponivel}`)
+        
     }
 }
-
+const livro1 = new Livro("a moreninha","Joaquim Manuel de Macedo","moderna","Romance",0)
 class Usuario extends CadastroBiblioteca {
     constructor(
         nome: string,
@@ -62,7 +57,7 @@ class Usuario extends CadastroBiblioteca {
         console.log(`cpf:${this.cpf}`)
     }
 }
-
+const usurario1= new Usuario("Diego","rua pajuçara","849505921","emprestimo Ativo","asa323223","diego_confessor@gmail.com","090876655")
 class Emprestimo extends CadastroBiblioteca {
     constructor(
     public livro: string,
@@ -81,7 +76,7 @@ class Emprestimo extends CadastroBiblioteca {
 
     mostrarDados() {
     super.MostrarDados()
-      console.log('Dados Emprestimo')
+     console.log('Dados Emprestimo')
         console.log(`livro:${this.livro}`)
         console.log(`usuario:${this.usuario}`)
         console.log(`nome:${this.nome}`)
@@ -91,7 +86,7 @@ class Emprestimo extends CadastroBiblioteca {
         console.log(`Cpf:${this.cpf}`)
         console.log(`Telenone:${this.telefone}`)
       console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
-     console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
+     console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR') }`) 
     }
 }
 
@@ -99,3 +94,6 @@ const emprestimo1 = new Emprestimo("A moreninha", "Diego", new Date("2024-02-23"
 
 //console.log(emprestimo1.mostrarDados());
 //console.log("=======================");
+//console.log(usurario1.mostrarDados());
+//console.log("===========================");
+//console.log(livro1.mostrarDados())
