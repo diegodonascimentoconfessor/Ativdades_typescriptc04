@@ -50,10 +50,15 @@ class Livro {
     ) { }
 
     mostrarDados() {
-        
+        console.log('Dados Livros')
+        console.log(`titulo:${this.titulo}`)
+        console.log(`autor:${this.autor}`)
+        console.log(`editora:${this.editora}`)
+        console.log(`categoria:${this.categoria}`)
+        console.log(`quantidade:${this.quantidadeDisponivel}`)
     }
 }
-const livro1 = new Livro("a moreninha","Joaquim Manuel de Macedo","moderna","Romance",0)
+
 class Usuario extends CadastroBiblioteca {
     constructor(
         nome: string,
@@ -77,14 +82,10 @@ class Usuario extends CadastroBiblioteca {
     }
 
 }
-<<<<<<< HEAD
 
 
 const usuario1 = new Usuario("fabio","rua Bela vista", "84988888","empestimo ativo","ao0908","fabio@hotmail.com","0987766655")
 
-=======
-const usurario1= new Usuario("Diego","rua pajuçara","849505921","emprestimo Ativo","asa323223","diego_confessor@gmail.com","090876655")
->>>>>>> 358b9d5a9663f57d05f1887d6e2ae91d205ce1ba
 class Emprestimo extends CadastroBiblioteca {
     constructor(
     public livro: string,
@@ -103,7 +104,7 @@ class Emprestimo extends CadastroBiblioteca {
 
     mostrarDados() {
     super.MostrarDados()
-     console.log('Dados Emprestimo')
+      console.log('Dados Emprestimo')
         console.log(`livro:${this.livro}`)
         console.log(`usuario:${this.usuario}`)
         console.log(`nome:${this.nome}`)
@@ -113,7 +114,7 @@ class Emprestimo extends CadastroBiblioteca {
         console.log(`Cpf:${super.getcpf}`)
         console.log(`Telenone:${this.telefone}`)
       console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
-     console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR') }`) 
+     console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
     }
 }
 
@@ -127,11 +128,8 @@ emprestimo1.setendereco("rua Brasil")
 console.log(emprestimo1.getendereco())
 console.log("=====================")
 usuario1.setendereco("98877887777")
-console.log(usuario1.getcpf())
+console.log(usuario1)
 
 
 //console.log(emprestimo1.mostrarDados());
 //console.log("=======================");
-//console.log(usurario1.mostrarDados());
-//console.log("===========================");
-//console.log(livro1.mostrarDados())

@@ -1,7 +1,7 @@
 
 class Pessoafisica {
     constructor(
-        public nome: string,
+        protected nome: string,
         public idade: number,
         public endereco: string,
         public telefone: string,
@@ -111,7 +111,7 @@ class controledeDespesas extends Pessoafisica {
         private transferencia: string,
         private extrato: string,
         private data: Date,
-        nome: string,
+        protected nome: string,
         idade: number,
         endereco: string, 
         telefone: string,
@@ -155,9 +155,9 @@ class controledeDespesas extends Pessoafisica {
 
 class Planejamento {
     constructor(
-        public meta: string,
-        public controledeGastos: string,
-        public progresso: string
+        protected meta: string,
+         protected controledeGastos: string,
+         protected progresso: string
     ) { }
     mostrarDados() {
         console.log('Planejamento')
