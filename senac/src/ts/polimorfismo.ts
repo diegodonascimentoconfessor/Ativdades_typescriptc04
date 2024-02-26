@@ -47,7 +47,7 @@ class Desenvolvedorfrontend extends Desenvolvedor{
           
       }
 }
-const Devfront = new Desenvolvedor("desenvolvedor Frontend","01022",["rua pajuçara"],"tito","8498898887","tito@gmail.com", new Date ('1987-02-25'),"010201")
+const Devfront = new Desenvolvedorfrontend("programa",'responsavel pelo desenvolvimento grafico','desenvolvedor Front end',"ad656656",['ruaa flamengo'], 'Marcos',"8497787877","marcos@gmail.com", new Date ('1992-03-23'),'0908087')
 
 Devfront.mostrarDados()
 console.log('==================================================')
@@ -71,7 +71,7 @@ class Desenvolvedorbackend extends Desenvolvedor{
     super.mostrarDados()
   }
 }
-const devback= new Desenvolvedorbackend("analisardados","desenvolvedorbackend","a99889",[ "rua  potengi"],"Gabriel","76668866","gabriel@gmail.com", new Date ('200-03-16'),"a01122000")
+const devback= new Desenvolvedorbackend("analisardados","desenvolvedorbackend","a99889",[ "rua  potengi"],"Gabriel","76668866","gabriel@gmail.com", new Date ('2000-03-16'),"a01122000")
 
 devback.mostrarDados()
 console.log('==================================================')
