@@ -1,10 +1,10 @@
 
 
-class Pessoa {
+ abstract class Pessoa {
     constructor(
         public endereco: string[],
         public nome: string,
-        public email: string,
+        protected email: string,
         public telefone: string,
         public data_nascimento: Date,
         public rg: string
@@ -12,15 +12,18 @@ class Pessoa {
     ) { }
 
     mostrarDados() {
-        console.log('Dados Pessoas')
-        console.log(`endereço:${this.endereco}`)
-        console.log(`nome:${this.nome}`)
-        console.log(`email:${this.email}`)
-        console.log(`telefone:${this.telefone}`)
-        console.log(`data de Nascimento:${this.data_nascimento.toLocaleString('pt-BR')}`)
-        console.log(`cpf:${this.rg}`)
+        
     }
-}
+
+    getEmail(): string{
+        return this.email
+    }
+    setEmail( email:string): void {
+          this.email = email
+    }
+
+    }
+
 
 // atributos Proprios da Classe Funcionario 
  export class Funcionario extends Pessoa {
@@ -42,12 +45,22 @@ class Pessoa {
         super.mostrarDados();
         console.log(`cargo: ${this.cargo}`);
         console.log(`matricula: ${this.matricula}`);
+        console.log(`email:${this.email}`)
+        console.log('Dados Pessoas')
+        console.log(`endereço:${this.endereco}`)
+        console.log(`nome:${this.nome}`)
+        console.log(`email:${this.email}`)
+        console.log(`telefone:${this.telefone}`)
+        console.log(`data de Nascimento:${this.data_nascimento.toLocaleString('pt-BR')}`)
+        console.log(`cpf:${this.rg}`)
+
     }
 
 }
 
 const Funcionario1 = new Funcionario("medico", "020122", ["rua brasil"], "joão", "8498898898", "joao@hotmail.com", new Date("2024-2-21"), "0210221100")
-
+ // Funcionario1. setEmail("Diego@gmail.com")
+ // console.log(Funcionario1.getEmail())
 //Cadastro de Consultas:
 //Dados específicos sobre cada consulta, incluindo informações importantes.
 
@@ -55,6 +68,7 @@ class Consulta {
 
     constructor(
     public  local: string, 
+
     public data: Date, 
     public convenio: boolean,
       public medico: Funcionario

@@ -1,10 +1,10 @@
-class CadastroBiblioteca {
+ abstract class CadastroBiblioteca {
     constructor(
         public nome: string,
-        public codigodeacesso: string,
+        public  codigodeacesso: string,
         public email: string,
-        public endereco: string,
-        public cpf: string,
+        protected endereco: string,
+        private cpf: string,
         public telefone: string
     ) { }
 
@@ -17,9 +17,28 @@ class CadastroBiblioteca {
         console.log(`cpf:${this.cpf}`)
         console.log(`telefone:${this.telefone}`)
     }
-}
 
-const CadastroBiblioteca1 = new CadastroBiblioteca("Diego", "AB654455", "diego@hotmail.com", "Rua pajuçara", "09877777", "498766555")
+    getcpf(): string{
+        return this.cpf
+    }
+    setcpf( cpf:string): void {
+          this.cpf = cpf
+
+   }
+
+   getendereco():string{
+    return this.endereco
+}
+  setendereco(endereco:string): void{
+       this.endereco= endereco
+  }
+     
+  }
+
+
+
+
+
 
 class Livro {
     constructor(
@@ -59,9 +78,13 @@ class Usuario extends CadastroBiblioteca {
         console.log(`endereço:${this.endereco}`)
         console.log(`telefone:${this.telefone}`)
         console.log(`relatorio emprestimo:${this.relatorioEmprestimo}`)
-        console.log(`cpf:${this.cpf}`)
+        console.log(`cpf:${super.getcpf}`)
     }
+
 }
+
+
+const usuario1 = new Usuario("fabio","rua Bela vista", "84988888","empestimo ativo","ao0908","fabio@hotmail.com","0987766655")
 
 class Emprestimo extends CadastroBiblioteca {
     constructor(
@@ -88,7 +111,7 @@ class Emprestimo extends CadastroBiblioteca {
         console.log(`Codigo de Acesso:${this.codigodeacesso}`)
         console.log(`email${this.email}`)
         console.log(`Endereço:${this.endereco}`)
-        console.log(`Cpf:${this.cpf}`)
+        console.log(`Cpf:${super.getcpf}`)
         console.log(`Telenone:${this.telefone}`)
       console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
      console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
@@ -96,6 +119,17 @@ class Emprestimo extends CadastroBiblioteca {
 }
 
 const emprestimo1 = new Emprestimo("A moreninha", "Diego", new Date("2024-02-23"), new Date("2024-04-23"), "Diego Confessor", "AB654455", "diego@hotmail.com", "rua pajuçara", "0876654", "878655443")
+
+
+emprestimo1.setcpf("06742178450")
+console.log(emprestimo1.getcpf())
+console.log('========================================')
+emprestimo1.setendereco("rua Brasil")
+console.log(emprestimo1.getendereco())
+console.log("=====================")
+usuario1.setendereco("98877887777")
+console.log(usuario1.getcpf())
+
 
 //console.log(emprestimo1.mostrarDados());
 //console.log("=======================");
