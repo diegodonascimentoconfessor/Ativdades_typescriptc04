@@ -109,7 +109,8 @@ class Paciente extends Pessoa {
 
 
 const paciente1 = new Paciente(34, "febre alta", '89878778', "06547877", ["rua sem nome "], "pedro", "pedro@gmail.com", "84988885544", new Date("2024-2-21"))
-
+Funcionario1.setEmail('Roberto@gmail.com')
+console.log(Funcionario1.getEmail())
 //paciente1.mostrarDados()
 //console.log('================================================')
 //Funcionario1.mostrarDados()

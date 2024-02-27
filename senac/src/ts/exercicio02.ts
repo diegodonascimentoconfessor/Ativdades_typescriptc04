@@ -126,9 +126,9 @@ console.log(emprestimo1.getcpf())
 console.log('========================================')
 emprestimo1.setendereco("rua Brasil")
 console.log(emprestimo1.getendereco())
-console.log("=====================")
-usuario1.setendereco("98877887777")
-console.log(usuario1)
+console.log("===========================================")
+usuario1.setendereco("flamengo")
+console.log(usuario1.getendereco())
 
 
 //console.log(emprestimo1.mostrarDados());
