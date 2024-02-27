@@ -1,11 +1,11 @@
- abstract class CadastroBiblioteca {
+abstract class CadastroBiblioteca {
     constructor(
-         private nome: string,
+        private nome: string,
         private codigodeacesso: string,
         private email: string,
         protected endereco: string,
         private cpf: string,
-        private  telefone: string
+        private telefone: string
     ) { }
 
     MostrarDados() {
@@ -18,47 +18,47 @@
         console.log(`telefone:${this.telefone}`)
     }
 
-    getcpf(): string{
+    getcpf(): string {
         return this.cpf
     }
-    setcpf( cpf:string): void {
-          this.cpf = cpf
+    setcpf(cpf: string): void {
+        this.cpf = cpf
 
-   }
-
-   getendereco():string{
-    return this.endereco
-}
-  setendereco(endereco:string): void{
-       this.endereco= endereco
-  }
-     getcodigodeacesso():string{
-         return this.codigodeacesso
-     }
-     setcodigodeacesso(codigodeacesso:string):void{
-        this.codigodeacesso =codigodeacesso
     }
 
-    getemail() :string{
+    getendereco(): string {
+        return this.endereco
+    }
+    setendereco(endereco: string): void {
+        this.endereco = endereco
+    }
+    getcodigodeacesso(): string {
+        return this.codigodeacesso
+    }
+    setcodigodeacesso(codigodeacesso: string): void {
+        this.codigodeacesso = codigodeacesso
+    }
+
+    getemail(): string {
         return this.email
     }
-    setemail(email:string):void{
-        this.email=email
+    setemail(email: string): void {
+        this.email = email
     }
 
-    getnome() :string{
+    getnome(): string {
         return this.nome
     }
-    setnome(nome:string):void{
+    setnome(nome: string): void {
         this.nome = nome
     }
-    gettelefone() : string{
+    gettelefone(): string {
         return this.telefone
     }
-    settelefone(telefone:string):void{
+    settelefone(telefone: string): void {
         this.telefone = telefone
     }
-  }
+}
 
 
 
@@ -93,8 +93,8 @@ class Usuario extends CadastroBiblioteca {
         nome: string,
         endereco: string,
         telefone: string,
-         private relatorioEmprestimo: string,
-         codigodeacesso: string,
+        private relatorioEmprestimo: string,
+        codigodeacesso: string,
         email: string,
         cpf: string,
     ) {
@@ -113,12 +113,12 @@ class Usuario extends CadastroBiblioteca {
 }
 
 
-const usuario1 = new Usuario("fabio","rua Bela vista", "84988888","empestimo ativo","ao0908","fabio@hotmail.com","0987766655")
+const usuario1 = new Usuario("fabio", "rua Bela vista", "84988888", "empestimo ativo", "ao0908", "fabio@hotmail.com", "0987766655")
 
 class Emprestimo extends CadastroBiblioteca {
     constructor(
-    public livro: string,
-     public usuario: string,
+        public livro: string,
+        public usuario: string,
         public dataEmprestimo: Date,
         public dataDevolucao: Date,
         nome: string,
@@ -132,18 +132,18 @@ class Emprestimo extends CadastroBiblioteca {
     }
 
     mostrarDados() {
-    super.MostrarDados()
-      console.log('Dados Emprestimo')
+        super.MostrarDados()
+        console.log('Dados Emprestimo')
         console.log(`livro:${this.livro}`)
         console.log(`usuario:${this.usuario}`)
-        console.log(`nome:${super. getnome}`)
+        console.log(`nome:${super.getnome}`)
         console.log(`Codigo de Acesso:${super.getcodigodeacesso}`)
         console.log(`email${super.getemail}`)
         console.log(`Endereço:${this.endereco}`)
         console.log(`Cpf:${super.getcpf}`)
         console.log(`Telenone:${super.gettelefone}`)
-      console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
-     console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
+        console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`)
+        console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`)
     }
 }
 
@@ -163,4 +163,4 @@ console.log(emprestimo1.gettelefone())
 
 
 //console.log(emprestimo1.mostrarDados());
-//console.log("=======================");
+//console.log("======================="); 

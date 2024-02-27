@@ -1,4 +1,4 @@
- import { idText } from 'typescript';
+/*  import { idText } from 'typescript';
 import {Funcionario} from './exercicio'
 
  class Desenvolvedor extends Funcionario{
@@ -99,4 +99,4 @@ mostrarDados(){
 }
 const devfullstack = new Desenvolvedorfullstack("especialistaemvarias linguagem","desenvolvedor full stack","a554444",[ 'rua Brasil'],"paulo","8499888744","carlos" ,new Date('1989-06-08'),"01020")
 
-devfullstack.mostrarDados()
+devfullstack.mostrarDados() */
