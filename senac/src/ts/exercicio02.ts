@@ -1,11 +1,11 @@
  abstract class CadastroBiblioteca {
     constructor(
-        public nome: string,
-        public  codigodeacesso: string,
-        public email: string,
+         private nome: string,
+        private codigodeacesso: string,
+        private email: string,
         protected endereco: string,
         private cpf: string,
-        public telefone: string
+        private  telefone: string
     ) { }
 
     MostrarDados() {
@@ -32,8 +32,37 @@
   setendereco(endereco:string): void{
        this.endereco= endereco
   }
-     
+     getcodigodeacesso():string{
+         return this.codigodeacesso
+     }
+     setcodigodeacesso(codigodeacesso:string):void{
+        this.codigodeacesso =codigodeacesso
+    }
+
+    getemail() :string{
+        return this.email
+    }
+    setemail(email:string):void{
+        this.email=email
+    }
+
+    getnome() :string{
+        return this.nome
+    }
+    setnome(nome:string):void{
+        this.nome = nome
+    }
+    gettelefone() : string{
+        return this.telefone
+    }
+    settelefone(telefone:string):void{
+        this.telefone = telefone
+    }
   }
+
+
+
+
 
 
 
@@ -64,8 +93,8 @@ class Usuario extends CadastroBiblioteca {
         nome: string,
         endereco: string,
         telefone: string,
-        public relatorioEmprestimo: string,
-        public codigodeacesso: string,
+         private relatorioEmprestimo: string,
+         codigodeacesso: string,
         email: string,
         cpf: string,
     ) {
@@ -74,9 +103,9 @@ class Usuario extends CadastroBiblioteca {
 
     mostrarDados() {
         console.log('Dados Usuarios')
-        console.log(`nome:${this.nome}`)
+        console.log(`nome:${super.getnome}`)
         console.log(`endereço:${this.endereco}`)
-        console.log(`telefone:${this.telefone}`)
+        console.log(`telefone:${super.gettelefone}`)
         console.log(`relatorio emprestimo:${this.relatorioEmprestimo}`)
         console.log(`cpf:${super.getcpf}`)
     }
@@ -107,12 +136,12 @@ class Emprestimo extends CadastroBiblioteca {
       console.log('Dados Emprestimo')
         console.log(`livro:${this.livro}`)
         console.log(`usuario:${this.usuario}`)
-        console.log(`nome:${this.nome}`)
-        console.log(`Codigo de Acesso:${this.codigodeacesso}`)
-        console.log(`email${this.email}`)
+        console.log(`nome:${super. getnome}`)
+        console.log(`Codigo de Acesso:${super.getcodigodeacesso}`)
+        console.log(`email${super.getemail}`)
         console.log(`Endereço:${this.endereco}`)
         console.log(`Cpf:${super.getcpf}`)
-        console.log(`Telenone:${this.telefone}`)
+        console.log(`Telenone:${super.gettelefone}`)
       console.log(`data emprestimo: ${this.dataEmprestimo.toLocaleDateString('pt-BR')}`) 
      console.log(`data Devolução:${this.dataDevolucao.toLocaleDateString('pt-BR')}`) 
     }
@@ -128,7 +157,9 @@ emprestimo1.setendereco("rua Brasil")
 console.log(emprestimo1.getendereco())
 console.log("===========================================")
 usuario1.setendereco("flamengo")
+console.log('===========================================')
 console.log(usuario1.getendereco())
+console.log(emprestimo1.gettelefone())
 
 
 //console.log(emprestimo1.mostrarDados());
