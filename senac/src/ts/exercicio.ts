@@ -59,8 +59,8 @@
 }
 
 const Funcionario1 = new Funcionario("medico", "020122", ["rua brasil"], "joão", "8498898898", "joao@hotmail.com", new Date("2024-2-21"), "0210221100")
- // Funcionario1. setEmail("Diego@gmail.com")
- // console.log(Funcionario1.getEmail())
+ // Fcionariuno1. setEmailil())("Diego@gmail.com")
+ // console.log(Funcionario1.getEmail
 //Cadastro de Consultas:
 //Dados específicos sobre cada consulta, incluindo informações importantes.
 

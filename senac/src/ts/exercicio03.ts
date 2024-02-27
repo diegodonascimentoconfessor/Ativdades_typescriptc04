@@ -1,10 +1,10 @@
 
-class Pessoafisica {
+abstract class Pessoafisica {
     constructor(
         protected nome: string,
-        public idade: number,
-        public endereco: string,
-        public telefone: string,
+       protected idade: number,
+        private endereco: string,
+        protected telefone: string,
         private conta: string,
         private cpf: string,
         private agencia: string) {
@@ -47,15 +47,21 @@ class Pessoafisica {
     setagencia(agencia:string) :void {
          this.agencia=agencia
     }
+
+    getendereco():string{
+        return this.endereco
+    }
+
 }
 
-const Pessoafisica1 = new Pessoafisica("joaquim", 35, " rua Pajuçara", "8767668766", "abcd9878877", "09908", "a55655544")
+
+
 class CadastroConta extends Pessoafisica {
     constructor(
-        public id: string,
-        public cliente: string,
-        public idade: number,
-        public email: string,
+        private id: string,
+         private cliente: string,
+        protected idade: number,
+         email: string,
         nome: string,
         endereco: string,
         telefone: string,
@@ -68,7 +74,7 @@ class CadastroConta extends Pessoafisica {
     mostrarDados() {
         super.mostrarDados();
         console.log('Dados conta')
-        console.log(`enderenço: ${this.endereco}`);
+        console.log(`enderenço: ${super.getendereco}`);
         console.log(`telefone:${this.telefone}`);
         console.log(`conta:${super.getconta}`)
         console.log(`cpf:${super.getcpf}`)
@@ -78,9 +84,9 @@ class CadastroConta extends Pessoafisica {
 const CadastroConta1 = new CadastroConta("565433ff", "vip", 45, "joaquim", "joaquim", " Rua Pajuçaa", "849887865", "a54544", "98779977", "tr544433");
 class Pessoajuridica extends Pessoafisica {
     constructor(
-        public nome: string,
-        public cnpj: string,
-        public idade: number,
+         nome: string,
+        private cnpj: string,
+        protected idade: number,
         cpf: string,
         endereco: string,
         telefone: string,
@@ -94,7 +100,7 @@ class Pessoajuridica extends Pessoafisica {
     mostrarDados() {
         super.mostrarDados();
         console.log("Dados Pessoa Juridica");
-        console.log(`endereço: ${this.endereco}`);
+        console.log(`endereço: ${super.getendereco}`);
         console.log(`telefone: ${this.telefone}`);
         console.log(`conta: ${super.getconta}`);
         console.log(`cnpj: ${this.cnpj}`);
@@ -112,8 +118,8 @@ class controledeDespesas extends Pessoafisica {
         private extrato: string,
         private data: Date,
         protected nome: string,
-        idade: number,
-        endereco: string, 
+        protected idade: number,
+         endereco: string, 
         telefone: string,
         conta: string,
         cpf: string,
@@ -122,6 +128,7 @@ class controledeDespesas extends Pessoafisica {
         super(nome, idade, endereco, telefone, conta, cpf, agencia);
         this.nome = nome;
         this.idade = idade;
+       
     
     }
 
@@ -175,3 +182,6 @@ const planejamento1 = new Planejamento("alcançada", "alcançado com sucesso", "
 //console.log(CadastroConta1.mostrarDados())
 //console.log("=========")
 //console.log(pessoajuridica1.mostrarDados())
+console.log(pessoajuridica1.getendereco())
+ 
+
